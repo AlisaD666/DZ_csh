@@ -1,14 +1,17 @@
 ﻿Console.WriteLine("Введите число ");
 int number = int.Parse(Console.ReadLine());
 int thirdNumber = 0;
+if(number > 99)
+{
 while(number > 999)
 {
     number = number / 10;
 }
 thirdNumber = number % 10;
 Console.WriteLine(thirdNumber);
+}
 
-if(number / 100 == 0)
+else
 {
   Console.WriteLine("Третьей цифры нет");  
 }
