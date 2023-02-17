@@ -1,6 +1,5 @@
 ﻿Console.WriteLine("Введите число ");
 int number = int.Parse(Console.ReadLine());
-int cube;
 
 if (number >= 1)
 {
@@ -18,5 +17,5 @@ void ProgramCube(int a)
     {
       Console.WriteLine("Число\tКуб");
       Console.WriteLine("{0}\t{1}", i, Math.Pow(i, 3)); 
-    }
+    } 
 }
