@@ -8,8 +8,8 @@ Console.WriteLine("Введите число B ");
 int numberB = int.Parse(Console.ReadLine());
 
 if (numberB > 0)
-{
-    Console.WriteLine(ProgramDegree(numberA, numberB));
+{   
+    Console.WriteLine($"Число {numberA} в степени {numberB} = {ProgramDegree(numberA, numberB)}");
 }
 
 else Console.WriteLine("Введите число B, которое больше 0");
