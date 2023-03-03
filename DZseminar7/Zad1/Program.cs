@@ -37,4 +37,3 @@ double[,] massiv = new double[m, n];
 
 FillArray(massiv);
 PrintArray(massiv);
-Console.WriteLine();
