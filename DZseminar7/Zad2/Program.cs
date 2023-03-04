@@ -32,16 +32,16 @@ void FillArray(int[,] mass)
     }
 }
 
-void CoordinateCheck(int [,] mass, int lin, int col)
+void CoordinateCheck(int[,] mass, int lin, int col)
 {
-if (lin > mass.GetLength(0) || col > mass.GetLength(1))
-{
-    Console.WriteLine("Такого элемента нет в массиве");
-}
-else
-{
-    Console.WriteLine($"Значение элемента: {mass[lin - 1, col - 1]}");
-}
+    if (lin > mass.GetLength(0) || col > mass.GetLength(1))
+    {
+        Console.WriteLine("Такого элемента нет в массиве");
+    }
+    else
+    {
+        Console.WriteLine($"Значение элемента: {mass[lin - 1, col - 1]}");
+    }
 }
 
 int[,] massiv = new int[3, 3];

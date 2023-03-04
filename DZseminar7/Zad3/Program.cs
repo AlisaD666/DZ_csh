@@ -31,18 +31,18 @@ void FillArray(int[,] mass)
     }
 }
 
-void AverageElementColumns(int [,] mass, int colum)
+void AverageElementColumns(int[,] mass, int colum)
 {
     for (int j = 0; j < mass.GetLength(1); j++)
-{
-    double result = 0;
-    for (int i = 0; i < mass.GetLength(0); i++)
     {
-        result = (result + mass[i, j]);
+        double result = 0;
+        for (int i = 0; i < mass.GetLength(0); i++)
+        {
+            result = (result + mass[i, j]);
+        }
+        result = result / colum;
+        Console.Write(result + "  ");
     }
-    result = result / colum;
-    Console.Write(result + "  ");
-}
 }
 
 int lines = SizeFromUser("Введите количество строк: ");
