@@ -2,7 +2,7 @@
 //элемента в двумерном массиве, и возвращает значение этого элемента
 //4 или же указание, что такого элемента нет.
 
-int SizeFromUser(string message)
+int ValueFromUser(string message)
 {
     Console.Write(message);
     int size = Convert.ToInt32(Console.ReadLine());
@@ -32,11 +32,22 @@ void FillArray(int[,] mass)
     }
 }
 
+void CoordinateCheck(int [,] mass, int lin, int col)
+{
+if (lin > mass.GetLength(0) || col > mass.GetLength(1))
+{
+    Console.WriteLine("Такого элемента нет в массиве");
+}
+else
+{
+    Console.WriteLine($"Значение элемента: {mass[lin - 1, col - 1]}");
+}
+}
 
-
-int lines = SizeFromUser("Введите количество строк: ");
-int columns = SizeFromUser("Введите количество столбцов: ");
-int[,] massiv = new int[lines, columns];
-
+int[,] massiv = new int[3, 3];
 FillArray(massiv);
 PrintArray(massiv);
+
+int line = ValueFromUser("Введите координату строки: ");
+int column = ValueFromUser("Введите координату стобца: ");
+CoordinateCheck(massiv, line, column);
