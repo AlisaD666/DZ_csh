@@ -17,7 +17,7 @@ void PrintArray(int[,,] massTreeD)
         {
             for (int k = 0; k < massTreeD.GetLength(2); k++)
             {
-                Console.WriteLine(massTreeD[i, j, k] + " ");
+                Console.WriteLine($"{massTreeD[i, j, k] + " "} ({i}, {k}, {j})");
             }
         }
         Console.WriteLine();
